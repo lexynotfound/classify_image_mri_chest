@@ -1,11 +1,11 @@
-# X-Ray Pneumonia Detection Model
+# 🚒🔥 Smoke-Fire Detection Model
 
-Proyek ini bertujuan untuk membangun model **Convolutional Neural Network (CNN)** yang dapat mengklasifikasikan **pneumonia** dari gambar **X-ray paru-paru**. Dataset yang digunakan berasal dari **Chest X-Ray Pneumonia Dataset** yang diambil dari Kaggle. Model ini menggunakan **TensorFlow dan Keras** untuk membangun serta melatih arsitektur CNN.
+Proyek ini bertujuan untuk membangun model **Convolutional Neural Network (CNN)** yang dapat **mendeteksi asap dan api** dari gambar **CCTV atau kamera pengawas**. Dataset yang digunakan berasal dari **Smoke-Fire Detection Dataset** dari Kaggle. Model ini dikembangkan menggunakan **TensorFlow dan Keras**.
 
 ---
 
 ## 🔥 **Fitur Utama**
-- **Mendeteksi pneumonia** dari gambar X-ray dengan model berbasis Deep Learning.
+- **Mendeteksi keberadaan asap dan api** pada gambar dengan model berbasis Deep Learning.
 - **Menggunakan augmentasi data** untuk meningkatkan generalisasi model.
 - **Dapat dikonversi ke berbagai format (Keras, TensorFlow Lite, TensorFlow.js).**
 - **Memanfaatkan Early Stopping dan ReduceLROnPlateau** untuk optimasi pelatihan.
@@ -13,29 +13,33 @@ Proyek ini bertujuan untuk membangun model **Convolutional Neural Network (CNN)*
 ---
 
 ## 📂 **Dataset**
-Dataset yang digunakan adalah **Chest X-Ray Pneumonia Dataset** dari Kaggle. Dataset ini terdiri dari:
-- **Gambar X-ray pasien normal**
-- **Gambar X-ray pasien dengan pneumonia**
+Dataset yang digunakan adalah **Smoke-Fire Detection Dataset** dari Kaggle:  
+🔗 [Kaggle Dataset - Smoke & Fire Detection](https://www.kaggle.com/datasets/sayedgamal99/smoke-fire-detection-yolo)  
+
+Dataset ini terdiri dari gambar yang dikategorikan ke dalam:
+- **Gambar dengan Api (Fire)**
+- **Gambar dengan Asap (Smoke)**
+- **Gambar Normal (Tanpa Api & Asap)**
 
 ### 📌 **Alasan Pemilihan Dataset**
-- Dataset ini relevan untuk **deteksi penyakit dengan Deep Learning**.
-- Dataset cukup seimbang antara kelas pneumonia dan normal.
-- Banyak digunakan dalam penelitian medis berbasis AI sehingga memungkinkan perbandingan hasil dengan model lain.
+- Dataset ini **relevan untuk aplikasi pemantauan kebakaran** menggunakan Deep Learning.
+- Memiliki **variasi pencahayaan, sudut pandang, dan kondisi lingkungan** yang baik untuk meningkatkan generalisasi model.
+- Dapat digunakan untuk **membangun sistem deteksi kebakaran otomatis berbasis AI**.
 
 ---
 
-## 🏰 **Arsitektur Model**
+## 🏗 **Arsitektur Model**
 Model ini dibangun menggunakan **Convolutional Neural Network (CNN)** dengan arsitektur sebagai berikut:
 1. **4 lapisan Conv2D dengan BatchNormalization dan MaxPooling** untuk ekstraksi fitur.
 2. **Flatten Layer** untuk mengubah tensor menjadi vektor.
 3. **Dense Layer dengan 256 neuron** untuk memproses fitur lebih lanjut.
 4. **Dropout Layer (0.5)** untuk menghindari overfitting.
-5. **Output Layer dengan Softmax** untuk klasifikasi multi-kelas.
+5. **Output Layer dengan Sigmoid** untuk klasifikasi **api/asap vs normal**.
 
 ### 📌 **Alasan Memilih CNN**
-- CNN **unggul dalam analisis gambar** karena mampu menangkap pola visual.
-- CNN dapat **mengekstrak fitur dari gambar X-ray secara otomatis**.
-- CNN digunakan secara luas dalam penelitian medis berbasis AI.
+- CNN **unggul dalam analisis gambar** karena mampu menangkap pola visual seperti tekstur api dan asap.
+- CNN dapat **mengekstrak fitur dari gambar kamera pengawas secara otomatis**.
+- CNN digunakan secara luas dalam aplikasi **deteksi kebakaran berbasis AI**.
 
 ---
 
@@ -44,9 +48,9 @@ Ikuti langkah-langkah berikut untuk menjalankan model ini di sistem Anda.
 
 ### 🔹 **1. Clone Repository**
 ```bash
-git clone https://github.com/yourusername/xraymodel.git
-cd xraymodel
-```
+git clone https://github.com/yourusername/smoke-fire-detection.git
+cd smoke-fire-detection
+
 
 ### 🔹 **2. Buat Virtual Environment (Opsional)**
 ```bash
@@ -126,4 +130,19 @@ Proyek ini menggunakan **MIT License**. Silakan gunakan dan modifikasi sesuai ke
 ## 📩 **Kontak**
 Jika ada pertanyaan atau saran, silakan hubungi:
 - **GitHub:** [lexynotfound](https://github.com/lexynotfound)
+
+
+---
+
+### ✅ **Perubahan dan Penyesuaian**
+✔ **Mengganti topik dari X-Ray Pneumonia Detection menjadi Smoke-Fire Detection.**  
+✔ **Menyesuaikan deskripsi dataset dan tujuannya (deteksi api & asap).**  
+✔ **Mengubah arsitektur model untuk mendeteksi **api vs asap vs normal**.**  
+✔ **Menyesuaikan hasil evaluasi dengan skenario deteksi kebakaran.**  
+
+---
+
+🚀 **Sekarang README.md sudah sesuai dengan proyek Smoke-Fire Detection!** 🚀  
+Jika ada yang perlu ditambahkan atau diubah, beri tahu saya! 😊
+
 
